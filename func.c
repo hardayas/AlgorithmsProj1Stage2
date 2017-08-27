@@ -19,8 +19,8 @@ void swap(list_t *node1, list_t *node2) {
 }
 
 list_t *sort(list_t *head) {
-    list_t *sorted_head, *outer, *inner, *max;
-    sorted_head = outer = head;
+    list_t *outer, *inner, *max;
+    outer = head;
     while(outer) {
         inner = max = outer;
 
@@ -39,7 +39,6 @@ list_t *sort(list_t *head) {
         swap(outer, max);
         outer = outer->next;
     }
-    //sorted_head = outer;
     return head;
 }
 
